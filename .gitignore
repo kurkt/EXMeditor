@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Blender
+*.blend
+*.blend[0-9]
+*.blend[0-9][0-9]
+
+# Packaged add-on builds
+*.zip
+!docs/**/*.zip
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ---------------------------------------------------------------
+# GAME DATA — never commit any of this.
+#
+# Ex Machina / Hard Truck Apocalypse assets remain the property of
+# their respective rights holders. This repository is a tool for editing that data, not a
+# place to redistribute it. The same applies to sample models used
+# while reverse engineering a format: keep them locally, describe the
+# measurements in the docs instead.
+# ---------------------------------------------------------------
+*.gam
+*.sam
+*.dds
+*.tga
+*.raw
+*.bin
+*.ssl
+servers.xml
+commonservers.xml
+animmodels.xml
+AnimModels.xml
+world.xml
+dynamicscene.xml
+samples/
+gamedata/
+
+# Editor logs — they contain absolute paths and machine names
+*.log
+exceptions/

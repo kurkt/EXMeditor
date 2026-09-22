@@ -1,2 +1,8 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Source and documentation keep LF in the working tree on every
+# platform. Blender reads either, and a mixed-ending diff hides the
+# change that matters.
+* text=auto eol=lf
+
+# LICENSE is the FSF text byte for byte — tests check its digest, so
+# git must not normalise it at all.
+LICENSE -text

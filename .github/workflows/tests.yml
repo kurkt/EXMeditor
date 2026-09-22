@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2026 Kurkt
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# The suite runs without Blender (tests/fake_bpy.py stands in for it),
+# so an ordinary Python 3.10 — the version Blender 3.6 carries — is all
+# CI needs. Windows is the platform the add-on is developed and
+# measured on; other platforms are untested, which is why they are not
+# claimed here.
+name: tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install development-only dependencies
+        # numpy is used by reverse/ and one test; the add-on itself
+        # needs nothing beyond the standard library (see THIRD_PARTY.md).
+        run: python -m pip install --upgrade pip numpy
+      - name: Run the suite
+        run: python run_tests.py
+      - name: Build the install archive
+        run: python build_release.py --out dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EXMeditor-install-archive
+          path: dist/*.zip
+          if-no-files-found: error
