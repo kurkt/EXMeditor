@@ -89,9 +89,20 @@ Under active reverse engineering. Import is solid; export writes what
 was edited and preserves the rest. What EXMeditor does not do yet, and
 M3DEditor still does: create new roads, follow a vehicle's
 `ParentPrototype` part chain, show a placed composite object whole
-before re-import, read `camera_paths.xml` / `external_paths.xml`. The
-full list, with the measurements behind it, is in `SDK_STATUS.md` in
+before re-import. The full list, with the measurements behind it, is in `SDK_STATUS.md` in
 the source repository; what is planned, in `ROADMAP.md`.
+
+## Support the project
+
+EXMeditor is free and open-source.
+
+If you find the project useful and would like to support its further development, you can do so on Boosty:
+
+**https://boosty.to/kurkts**
+
+Any support helps me spend more time developing EXMeditor, researching the game's formats, and adding new features.
+
+Thank you to everyone who uses the project, reports issues, and helps it grow.
 
 ## Licence
 
