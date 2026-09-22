@@ -229,3 +229,23 @@ The install archive carries this README, `CHANGELOG.md`,
 - `SDK_STATUS.md` — feature status; `ROADMAP.md` — what is next;
   `ARCHITECTURE.md` — how the packages fit; `CONTRIBUTING.md` — how
   to work on it and how a release is built.
+
+  ## Screenshots
+
+### Map editing
+
+<p align="center">
+  <img src="1.png" width="95%" alt="EXMeditor — map editing">
+</p>
+
+### Assets and objects
+
+<p align="center">
+  <img src="2.png" width="95%" alt="EXMeditor — assets and objects">
+</p>
+
+### Working with Ex Machina content in Blender
+
+<p align="center">
+  <img src="3.png" width="95%" alt="EXMeditor — Ex Machina content in Blender">
+</p>
